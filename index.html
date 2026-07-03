@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Resume & Career Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background-slider">
+        <div class="slide active" style="background-image: url('HTML/image1.jpg');"></div>
+        <div class="slide" style="background-image: url('HTML/image2.jpg');"></div>
+        <div class="slide" style="background-image: url('HTML/image3.jpg');"></div>
+        <div class="overlay-scrim"></div>
+    </div>
+
+    <header class="navbar">
+        <div class="logo"><span class="logo-dot"></span>GPT HUB</div>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Pricing</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="btn-login" id="loginBtn">Sign In</button>
+        </div>
+    </header>
+
+    <main class="main-wrapper">
+        <section class="hero-intro">
+            <div class="badge">✨ Next-Generation AI Engine</div>
+            <h1 class="hero-title">Welcome to <br><span class="gradient-box">GPT RESUME BUILDER</span></h1>
+            <p class="hero-subtitle">Create your winning resume and navigate your professional trajectory with custom AI models.</p>
+        </section>
+
+        <section class="options-container">
+            <div class="cards-grid">
+                
+                <div class="feature-card" id="goToBuilder">
+                    <div class="icon-wrapper bg-blue">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </div>
+                    <h3>AI Resume Builder</h3>
+                    <p>Craft tailored, ATS-optimized resumes designed to catch the eyes of top recruiters automatically.</p>
+                    <span class="action-link">Launch Builder &rarr;</span>
+                </div>
+
+                <div class="feature-card" id="goToGuidance">
+                    <div class="icon-wrapper bg-purple">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    </div>
+                    <h3>Career Guidance</h3>
+                    <p>Map your skills against current market frameworks and track growth trajectories with precision.</p>
+                    <span class="action-link">Explore Pathing &rarr;</span>
+                </div>
+
+            </div>
+        </section>
+
+        <div id="authModal" class="custom-modal hidden">
+            <div class="modal-card">
+                <div id="modalContentNotice">
+                    <div class="modal-icon">🔒</div>
+                    <h2>Access Denied</h2>
+                    <p id="modalMessage">Ee option ni access cheyyalante clear ga **First Login kani Signup kani** avvali.</p>
+                </div>
+
+                <div id="modalContentForm" style="display: none; width: 100%;">
+                    <h2 id="formTitle" style="margin-bottom: 20px;">Sign In to GPT Hub</h2>
+                    <form id="authForm" style="display: flex; flex-direction: column; gap: 15px; text-align: left;">
+                        <div class="form-group" id="signUpFields" style="display: none; flex-direction: column; gap: 5px;">
+                            <label for="regName" style="font-weight: 600; font-size: 14px;">Full Name</label>
+                            <input type="text" id="regName" placeholder="Enter your name" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit;">
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+                            <label for="authEmail" style="font-weight: 600; font-size: 14px;">Email Address</label>
+                            <input type="email" id="authEmail" required placeholder="name@example.com" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit;">
+                        </div>
+                        <div class="form-group" style="display: flex; flex-direction: column; gap: 5px;">
+                            <label for="authPassword" style="font-weight: 600; font-size: 14px;">Password</label>
+                            <input type="password" id="authPassword" required placeholder="••••••••" style="padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit;">
+                        </div>
+                        <button type="submit" class="btn-modal-action" id="submitAuthBtn" style="margin-top: 10px; width: 100%;">Log In</button>
+                    </form>
+                    <p style="margin-top: 15px; font-size: 14px;" id="toggleFormText">Don't have an account? <a href="#" id="switchToSignUp" style="color: #0070f3; font-weight: 600; text-decoration: none;">Sign Up</a></p>
+                </div>
+
+                <div class="modal-buttons" style="margin-top: 20px; width: 100%;">
+                    <button class="btn-modal-action" id="closeModalBtn" style="background: transparent; color: #666; border: 1px solid #ccc;">Close & Go Back</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
