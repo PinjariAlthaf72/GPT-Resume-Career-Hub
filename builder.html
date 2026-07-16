@@ -41,40 +41,43 @@
 
     <section class="filter-section">
 
-        <select>
-            <option selected hidden>Headshot</option>
-            <option>With Photo</option>
-            <option>Without Photo</option>
+        <select id="headshotFilter">
+            <option selected hidden value="">Headshot</option>
+            <option value="with-photo">With Photo</option>
+            <option value="without-photo">Without Photo</option>
         </select>
 
-        <select>
-            <option selected hidden>Graphics</option>
-            <option>Minimal</option>
-            <option>Professional</option>
-            <option>Creative</option>
+        <select id="graphicsFilter">
+            <option selected hidden value="">Graphics</option>
+            <option value="minimal">Minimal</option>
+            <option value="professional">Professional</option>
+            <option value="creative">Creative</option>
         </select>
 
-        <select>
-            <option selected hidden>Columns</option>
-            <option>One Column</option>
-            <option>Two Column</option>
+        <select id="columnsFilter">
+            <option selected hidden value="">Columns</option>
+            <option value="one">One Column</option>
+            <option value="two">Two Column</option>
         </select>
 
-        <select>
-            <option selected hidden>Experience</option>
-            <option>Fresher</option>
-            <option>Experienced</option>
+        <select id="experienceFilter">
+            <option selected hidden value="">Experience</option>
+            <option value="fresher">Fresher</option>
+            <option value="experienced">Experienced</option>
         </select>
 
     </section>
 
     <section class="template-grid">
     <div class="template-card"
-        data-template-id="fresher-ats-1"
-        data-name="Fresher ATS">
+     data-template-id="fresher-ats-1"
+     data-headshot="without-photo"
+     data-graphics="minimal"
+     data-columns="one"
+     data-experience="fresher">
 
         <div class="resume-preview">
-            <img src="templates/fresher-ats-1.png"
+            <img src="templates/fresher.png"
                 alt="Fresher ATS Resume">
         </div>
 
@@ -86,31 +89,31 @@
 
     </div>
     <div class="template-card"
-     data-template-id="teacher-ats-1"
-     data-name="Teacher ATS">
+     data-template-id="Facility Property Manager"
+     data-name="Facility Property Manager">
 
     <div class="resume-preview">
-        <img src="templates/teacher-ats-2.png"
-             alt="Teacher ATS Resume">
+        <img src="templates/Facility property Manager.png"
+             alt="Facility property Manager">
     </div>
 
-    <h3>Teacher ATS</h3>
+    <h3>Facility Property Manager</h3>
 
     <button class="choose-btn">
         Choose Template
     </button>
-
 </div>
-   <div class="template-card"
-     data-template-id="student-ats-1"
-     data-name="Student ATS">
+
+    <div class="template-card"
+     data-template-id="teacher-ats-1"
+     data-name="Teacher ATS">
 
     <div class="resume-preview">
-        <img src="templates/student-ats-3.png"
-             alt="Student ATS Resume">
+        <img src="templates/Teacher.png"
+             alt="Teacher ATS Resume">
     </div>
 
-    <h3>Student ATS</h3>
+    <h3>Teacher ATS</h3>
 
     <button class="choose-btn">
         Choose Template
@@ -122,15 +125,32 @@
      data-name="Marketing ATS">
 
     <div class="resume-preview">
-        <img src="templates/marketing-ats-4.jpeg"
-             alt="Marketing ATS Resume">
+        <img src="templates/Marketing Manager.jpg"
+             alt="Marketing Manager">
     </div>
 
-    <h3>Marketing ATS</h3>
+    <h3>Marketing Manager</h3>
 
     <button class="choose-btn">
         Choose Template
     </button>
+</div>
+   <div class="template-card"
+     data-template-id="student-ats-1"
+     data-name="Student ATS">
+
+    <div class="resume-preview">
+        <img src="templates/student.png"
+             alt="Student ATS Resume">
+    </div>
+
+    <h3>Student ATS</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+
+</div>
 
 </div>
 <div class="template-card"
@@ -138,7 +158,7 @@
      data-name="Software ATS">
 
     <div class="resume-preview">
-        <img src="templates/software-ats-5.png"
+        <img src="templates/software engineer.png"
              alt="Software ATS Resume">
     </div>
 
@@ -156,120 +176,264 @@
      data-name="Graphics Designer">
 
     <div class="resume-preview">
-        <img src="templates/Graphic-designer-6.png"
+        <img src="templates/GRAPHIC DESIGNERR.png"
              alt="Graphic designer Resume">
     </div>
 
-    <h3>Graphic designer ATS</h3>
+    <h3>Graphic Designer </h3>
 
     <button class="choose-btn">
         Choose Template
     </button>
 
 </div>
-    <div class="template-card">
-    <div class="resume-preview medical"></div>
-    <h3>Medical</h3>
-    <button class="choose-btn">Choose Template</button>
-    </div>
-    <div class="template-card">
-    <div class="resume-preview uiux"></div>
-    <h3>UI UX Designer</h3>
-    <button class="choose-btn">Choose Template</button>
-    </div>
 
-    <div class="template-card">
+<div class="template-card"
+     data-template-id="Web Designer"
+     data-name="Web Designer">
 
-        <div class="resume-preview creative"></div>
-
-        <h3>Creative Modern</h3>
-
-        <button class="choose-btn">
-            Choose Template
-        </button>
-
+    <div class="resume-preview">
+        <img src="templates/Web Designer.png"
+             alt="Web Designing">
     </div>
 
-    <div class="template-card">
+    <h3>Web Designing</h3>
 
-        <div class="resume-preview minimal"></div>
+    <button class="choose-btn">
+        Choose Template
+    </button>
 
-        <h3>Minimal Clean</h3>
+</div>
 
-        <button class="choose-btn">
-            Choose Template
-        </button>
+<div class="template-card"
+     data-template-id="SM Marketing Manager"
+     data-name="Graphics Designer">
 
+    <div class="resume-preview">
+        <img src="templates/Social media marketing manager.png"
+             alt="social media marketing manager">
     </div>
 
-    <div class="template-card">
+    <h3>Social media marketing manager</h3>
 
-        <div class="resume-preview harvard"></div>
+    <button class="choose-btn">
+        Choose Template
+    </button>
 
-        <h3>Harvard</h3>
+</div>
+<div class="template-card"
+     data-template-id="Marketing Manager"
+     data-name="Marketing Manager">
 
-        <button class="choose-btn">
-            Choose Template
-        </button>
-
+    <div class="resume-preview">
+        <img src="templates/Marketing Manager.png"
+             alt="Marketing Manager">
     </div>
 
+    <h3>Marketing Manager</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
 
 
-    <div class="template-card">
-    <div class="resume-preview business"></div>
-    <h3>Business Analyst</h3>
-    <button class="choose-btn">Choose Template</button>
+<div class="template-card"
+     data-template-id="Project Manager"
+     data-name="Project Manager">
+
+    <div class="resume-preview">
+        <img src="templates/Project Manager.png"
+             alt="Project Manager">
     </div>
 
-    <div class="template-card">
-    <div class="resume-preview marketing"></div>
-    <h3>Marketing</h3>
-    <button class="choose-btn">Choose Template</button>
+    <h3>Project Manger</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+
+</div>
+
+<div class="template-card"
+     data-template-id="PhotoGrapher"
+     data-name="Photo Grapher">
+
+    <div class="resume-preview">
+        <img src="templates/PhotoGrapher.jpg"
+             alt="Photo Grapher">
     </div>
 
-    <div class="template-card">
-    <div class="resume-preview teacher"></div>
-    <h3>Teacher</h3>
-    <button class="choose-btn">Choose Template</button>
+    <h3>PhotoGrapher</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+
+</div>
+ 
+<div class="template-card"
+     data-template-id="Senior Sales Assistant"
+     data-name="Senior Sales Assistant">
+
+    <div class="resume-preview">
+        <img src="templates/Senior sales assistant.png"
+             alt="Senior Sales Assistant">
     </div>
 
-    <div class="template-card">
-    <div class="resume-preview accounting"></div>
-    <h3>Accountant</h3>
-    <button class="choose-btn">Choose Template</button>
+    <h3>Senior Sales Assistant</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+       
+<div class="template-card"
+     data-template-id="Project Manager"
+     data-name="Project Manager">
+
+    <div class="resume-preview">
+        <img src="templates/Project Manger.png"
+             alt="Project Manager">
     </div>
 
+    <h3>Project Manager</h3>
 
-    <div class="template-card">
-    <div class="resume-preview black"></div>
-    <h3>Black Elegant</h3>
-    <button class="choose-btn">Choose Template</button>
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+<div class="template-card"
+     data-template-id="Operation Manager"
+     data-name="Operation Manager">
+
+    <div class="resume-preview">
+        <img src="templates/Operations Manager.png"
+             alt="Operation Manager">
+    </div>
+    <h3>Operation Manager</h3>
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+
+<div class="template-card"
+     data-template-id="Full Time Educator"
+     data-name="Full Time Educator">
+
+    <div class="resume-preview">
+        <img src="templates/Full Time Educator.png"
+             alt="Full Time Educator">
     </div>
 
-    <div class="template-card">
-    <div class="resume-preview blue"></div>
-    <h3>Blue Professional</h3>
-    <button class="choose-btn">Choose Template</button>
+    <h3>Full Time Educator</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+
+<div class="template-card"
+     data-template-id="Data Analyst"
+     data-name="Data Analyst">
+
+    <div class="resume-preview">
+        <img src="templates/Data Analyst.png"
+             alt="Data Analyst">
     </div>
 
-    <div class="template-card">
-    <div class="resume-preview green"></div>
-    <h3>Green ATS</h3>
-    <button class="choose-btn">Choose Template</button>
+    <h3>Data Analyst</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+
+</div>
+
+<div class="template-card"
+     data-template-id="Designer and Architect"
+     data-name="Designer And Architect">
+
+    <div class="resume-preview">
+        <img src="templates/Designer and Architect.jpg"
+             alt="Designer and Architect">
     </div>
 
-    <div class="template-card"><div class="resume-preview intern"></div><h3>Internship</h3><button class="choose-btn">Choose Template</button></div>
+    <h3>Designer and Architect</h3>
 
-    <div class="template-card"><div class="resume-preview graduate"></div><h3>Graduate</h3><button class="choose-btn">Choose Template</button></div>
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
 
-    <div class="template-card"><div class="resume-preview management"></div><h3>Management</h3><button class="choose-btn">Choose Template</button></div>
+<div class="template-card"
+     data-template-id="Driver"
+     data-name="Driver">
 
-    <div class="template-card"><div class="resume-preview professional"></div><h3>Professional ATS</h3><button class="choose-btn">Choose Template</button></div>
+    <div class="resume-preview">
+        <img src="templates/Driver.png"
+             alt="Driver">
+    </div>
 
-    <div class="template-card"><div class="resume-preview deluxe"></div><h3>Deluxe Resume</h3><button class="choose-btn">Choose Template</button></div>
+    <h3>Driver</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+
+
+<div class="template-card"
+     data-template-id="Finalyst Manager"
+     data-name="Finalyst Manager">
+
+    <div class="resume-preview">
+        <img src="templates/Finalyst Manager.png"
+             alt="Finalyst Manager">
+    </div>
+
+    <h3>Finalyst Manager</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+<div class="template-card"
+     data-template-id="Marketing Executive"
+     data-name="Marketing Excutive">
+
+    <div class="resume-preview">
+        <img src="templates/Marketing Executive.png"
+             alt="Marketing Executive">
+    </div>
+
+    <h3>Marketing Executive</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
+<div class="template-card"
+     data-template-id="Flight Attendant"
+     data-name="Flight Attendant">
+
+    <div class="resume-preview">
+        <img src="templates/Flight Attendant.jpg"
+             alt="Flight Attendant">
+    </div>
+
+    <h3>Flight Attendant</h3>
+
+    <button class="choose-btn">
+        Choose Template
+    </button>
+</div>
     </section>
-
+<!-- Template Preview Modal -->
+<div id="previewModal" class="preview-modal">
+    <span class="close-preview">&times;</span>
+    <img id="previewImage" src="" alt="Resume Preview">
+</div>
     <script src="builder.js"></script>
 
     </body>

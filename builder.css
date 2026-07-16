@@ -195,17 +195,22 @@ body{
 /* RESUME PREVIEW */
 /* RESUME PREVIEW */
 .resume-preview{
-    height:auto;
+    width:100%;
+    aspect-ratio:210 / 297; /* A4 Ratio */
+    background:#fff;
     overflow:hidden;
     border-bottom:1px solid #eee;
-    background:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
 }
 
 .resume-preview img{
     width:100%;
-    height:auto;
-    display:block;
+    height:100%;
     object-fit:contain;
+    display:block;
 }
 /* MOBILE */
 
@@ -258,4 +263,36 @@ width:100%;
 
 .resume-preview *{
     background-image:none !important;
+}
+/* ==========================
+   TEMPLATE PREVIEW MODAL
+========================== */
+
+.preview-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.85);
+    z-index:99999;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.preview-modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+}
+
+.close-preview{
+    position:absolute;
+    top:20px;
+    right:30px;
+    color:#fff;
+    font-size:45px;
+    cursor:pointer;
+    font-weight:bold;
 }

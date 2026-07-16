@@ -1,33 +1,54 @@
-// ===============================
-// builder.js
-// ===============================
+const headshotFilter = document.getElementById("headshotFilter");
+const graphicsFilter = document.getElementById("graphicsFilter");
+const columnsFilter = document.getElementById("columnsFilter");
+const experienceFilter = document.getElementById("experienceFilter");
 
-document.addEventListener("DOMContentLoaded", () => {
+function filterTemplates() {
 
-    // Back Button
-    const backBtn = document.querySelector(".back-btn");
+    const headshot = headshotFilter.value;
+    const graphics = graphicsFilter.value;
+    const columns = columnsFilter.value;
+    const experience = experienceFilter.value;
 
-    if (backBtn) {
-        backBtn.addEventListener("click", () => {
-            window.location.href = "index.html";
-        });
-    }
+    document.querySelectorAll(".template-card").forEach(card => {
 
-   document.querySelectorAll(".btn-choose-mock").forEach(btn=>{
+        let show = true;
 
-    btn.addEventListener("click",function(e){
+        if (
+            headshot &&
+            card.dataset.headshot !== headshot
+        ) {
+            show = false;
+        }
 
-        e.stopPropagation();
+        if (
+            graphics &&
+            card.dataset.graphics !== graphics
+        ) {
+            show = false;
+        }
 
-        const card=this.closest(".template-showcase-card");
+        if (
+            columns &&
+            card.dataset.columns !== columns
+        ) {
+            show = false;
+        }
 
-        const template=card.dataset.templateId;
+        if (
+            experience &&
+            card.dataset.experience !== experience
+        ) {
+            show = false;
+        }
 
-        window.location.href=
-        "builder-input-form.html?template="+template;
+        card.style.display = show ? "block" : "none";
 
     });
 
-});
+}
 
-});
+headshotFilter.addEventListener("change", filterTemplates);
+graphicsFilter.addEventListener("change", filterTemplates);
+columnsFilter.addEventListener("change", filterTemplates);
+experienceFilter.addEventListener("change", filterTemplates);
