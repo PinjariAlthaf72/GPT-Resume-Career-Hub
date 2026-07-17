@@ -204,9 +204,9 @@ document.getElementById("chooseTemplateBtn").onclick=function(){
 
 }
 
-// ----------------------------
-// BACK BUTTON
-// ----------------------------
-document.querySelector(".back-btn").addEventListener("click", function () {
-    window.history.back();
+///// BACK BUTTON 
+
+
+ document.querySelector(".back-btn").addEventListener("click", () => {
+    window.location.href = "index.html";
 });
